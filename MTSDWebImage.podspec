@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTSDWebImage'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'SDWebImage静态库 framework'
 
   s.description      = <<-DESC
@@ -28,11 +28,12 @@ if ENV['IS_SOURCE']
     s.source_files = 'MTSDWebImage/Classes/**/*{h,m}'
   #s.public_header_files = 'MTSDWebImage/Classes/Public/**/*.h'
 else
-    s.ios.vendored_frameworks = 'MTSDWebImage/Framework/MTSDWebImage.framework'
+        s.source_files = 'MTSDWebImage/Framework/**/*{h}'
+        s.vendored_libraries = 'MTSDWebImage/Framework/libMTSDWebImage.a'
 end
 
 s.requires_arc = true
-s.frameworks =  'UIKit' , 'Foundation' , 'MobileCoreServices' , 'ImageIO'
+s.frameworks =  'UIKit' , 'Foundation' , 'MobileCoreServices' , 'ImageIO' , 'Accelerate'
 s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
 end

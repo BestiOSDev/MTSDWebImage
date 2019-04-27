@@ -1,0 +1,1 @@
+../../../../../MTSDWebImage/Framework/SDImageIOCoder.h
