@@ -1,0 +1,6 @@
+framework module DSDWebImage {
+  umbrella header "DSDWebImage.h"
+
+  export *
+  module * { export * }
+}

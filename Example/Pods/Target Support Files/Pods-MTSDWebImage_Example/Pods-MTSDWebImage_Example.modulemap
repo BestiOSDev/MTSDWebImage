@@ -1,0 +1,6 @@
+framework module Pods_MTSDWebImage_Example {
+  umbrella header "Pods-MTSDWebImage_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

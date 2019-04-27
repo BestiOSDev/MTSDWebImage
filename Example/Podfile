@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MTSDWebImage_Example' do
+  pod 'MTSDWebImage', :path => '../'
+
+  target 'MTSDWebImage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
