@@ -7,9 +7,9 @@
  */
 
 #import "UIImage+Transform.h"
-
+#import "NSImage+Compatibility.h"
 #import "SDImageGraphics.h"
-
+#import "NSBezierPath+RoundedCorners.h"
 #import <Accelerate/Accelerate.h>
 #if SD_UIKIT || SD_MAC
 #import <CoreImage/CoreImage.h>

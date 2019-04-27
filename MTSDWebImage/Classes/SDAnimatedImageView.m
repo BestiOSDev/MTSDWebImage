@@ -6,13 +6,12 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "SDAnimatedImageView.h"
-
+#import "SDInternalMacros.h"
 #if SD_UIKIT || SD_MAC
 
 #import "UIImage+Metadata.h"
-
+#import "NSImage+Compatibility.h"
 #import "SDWeakProxy.h"
 #import <mach/mach.h>
 #import <objc/runtime.h>

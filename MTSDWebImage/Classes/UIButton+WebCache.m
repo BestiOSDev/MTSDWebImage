@@ -6,12 +6,12 @@
  * file that was distributed with this source code.
  */
 
+#import "SDInternalMacros.h"
 #import "UIButton+WebCache.h"
 
 #if SD_UIKIT
 
 #import "objc/runtime.h"
-#import "SDInternalMacros.h"
 #import "UIView+WebCacheOperation.h"
 #import "UIView+WebCache.h"
 

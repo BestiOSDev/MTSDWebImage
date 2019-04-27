@@ -10,10 +10,11 @@
 #endif
 #endif
 
+#import "MTSDWebImage.h"
 #import "NSButton+WebCache.h"
 #import "NSData+ImageContentType.h"
-
-
+#import "NSImage+Compatibility.h"
+#import "NSBezierPath+RoundedCorners.h"
 #import "SDAsyncBlockOperation.h"
 #import "SDImageAPNGCoderInternal.h"
 #import "SDImageAssetManager.h"
@@ -44,7 +45,6 @@
 #import "SDImageLoadersManager.h"
 #import "SDImageTransformer.h"
 #import "SDMemoryCache.h"
-#import "SDWebImage.h"
 #import "SDWebImageCacheKeyFilter.h"
 #import "SDWebImageCacheSerializer.h"
 #import "SDWebImageCompat.h"

@@ -8,6 +8,7 @@
 
 #import "SDImageCoderHelper.h"
 #import "SDImageFrame.h"
+#import "NSImage+Compatibility.h"
 #import "NSData+ImageContentType.h"
 #import "SDAnimatedImageRep.h"
 #import "UIImage+ForceDecode.h"

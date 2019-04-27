@@ -1,0 +1,6 @@
+framework module MTSDWebImage {
+  umbrella header "MTSDWebImage.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 #import "SDImageCache.h"
 #import "SDMemoryCache.h"
 #import "SDDiskCache.h"
-
+#import "NSImage+Compatibility.h"
 #import "SDImageCodersManager.h"
 #import "SDImageTransformer.h"
 #import "SDImageCoderHelper.h"

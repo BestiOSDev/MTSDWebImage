@@ -8,7 +8,7 @@
 
 #import "MTViewController.h"
 
-#import "UIImageView+WebCache.h"
+#import <MTSDWebImage/MTSDWebImage.h>
 
 @interface MTViewController ()
 

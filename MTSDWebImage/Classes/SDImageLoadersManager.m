@@ -6,7 +6,6 @@
  * file that was distributed with this source code.
  */
 
-//#import "SDmetamacros.h"
 #import "SDInternalMacros.h"
 #import "SDImageLoadersManager.h"
 #import "SDWebImageDownloader.h"
