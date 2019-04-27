@@ -26,7 +26,7 @@ SDWebImage静态库 framework 提高便以速度
 
 if ENV['IS_SOURCE']
     s.source_files = 'MTSDWebImage/Classes/**/*{h,m}'
-  #s.public_header_files = 'MTSDWebImage/Classes/Public/**/*.h'
+    #s.public_header_files = 'MTSDWebImage/Classes/Public/**/*.h'
 else
         s.source_files = 'MTSDWebImage/Framework/**/*{h}'
         s.vendored_libraries = 'MTSDWebImage/Framework/libMTSDWebImage.a'
