@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDWebImageCacheSerializer.h
+../../../../../MTSDWebImage/Classes/Public/SDWebImageCacheSerializer.h

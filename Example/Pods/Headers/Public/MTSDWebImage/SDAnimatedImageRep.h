@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDAnimatedImageRep.h
+../../../../../MTSDWebImage/Classes/Public/SDAnimatedImageRep.h

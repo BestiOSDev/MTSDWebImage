@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDAnimatedImage.h
+../../../../../MTSDWebImage/Classes/Public/SDAnimatedImage.h

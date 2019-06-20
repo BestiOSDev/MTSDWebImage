@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDWebImageIndicator.h
+../../../../../MTSDWebImage/Classes/Public/SDWebImageIndicator.h

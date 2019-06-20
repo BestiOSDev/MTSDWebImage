@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/NSButton+WebCache.h
+../../../../../MTSDWebImage/Classes/Public/NSButton+WebCache.h

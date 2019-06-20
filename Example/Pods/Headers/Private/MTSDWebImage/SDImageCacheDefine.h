@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDImageCacheDefine.h
+../../../../../MTSDWebImage/Classes/Public/SDImageCacheDefine.h

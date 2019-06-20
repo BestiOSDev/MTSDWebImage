@@ -7,7 +7,7 @@
 //
 
 #import "MTViewController.h"
-#import "MTSDWebImage.h"
+#import <MTSDWebImage/MTSDWebImage.h>
 
 @interface MTViewController ()
 

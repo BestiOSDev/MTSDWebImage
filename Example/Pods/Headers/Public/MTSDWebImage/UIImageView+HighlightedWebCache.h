@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/UIImageView+HighlightedWebCache.h
+../../../../../MTSDWebImage/Classes/Public/UIImageView+HighlightedWebCache.h

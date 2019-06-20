@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDImageCodersManager.h
+../../../../../MTSDWebImage/Classes/Public/SDImageCodersManager.h

@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDWebImagePrefetcher.h
+../../../../../MTSDWebImage/Classes/Public/SDWebImagePrefetcher.h

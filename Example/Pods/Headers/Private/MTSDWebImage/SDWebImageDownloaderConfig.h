@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDWebImageDownloaderConfig.h
+../../../../../MTSDWebImage/Classes/Public/SDWebImageDownloaderConfig.h

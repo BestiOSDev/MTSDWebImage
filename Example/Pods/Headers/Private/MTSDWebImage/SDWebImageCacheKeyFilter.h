@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Classes/SDWebImageCacheKeyFilter.h
+../../../../../MTSDWebImage/Classes/Public/SDWebImageCacheKeyFilter.h

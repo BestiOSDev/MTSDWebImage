@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTSDWebImage'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'SDWebImage静态库 framework'
   
   s.description      = <<-DESC
@@ -26,10 +26,9 @@ Pod::Spec.new do |s|
   
   if ENV['IS_SOURCE']
     s.source_files = 'MTSDWebImage/Classes/**/*{h,m}'
-    s.public_header_files = 'MTSDWebImage/Classes/**/*.h'
+    s.public_header_files = 'MTSDWebImage/Classes/Public/**/*.h'
     else
-    s.source_files = 'MTSDWebImage/Framework/**/*{h}'
-    s.ios.vendored_frameworks = 'MTIQKeyboardManager/Framework/MTSDWebImage.framework'
+    s.ios.vendored_frameworks = 'MTSDWebImage/Framework/MTSDWebImage.framework'
   end
   
   s.requires_arc = true
@@ -37,4 +36,5 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   
 end
+
 
