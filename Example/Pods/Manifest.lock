@@ -1,5 +1,5 @@
 PODS:
-  - MTSDWebImage (0.1.4)
+  - MTSDWebImage (0.1.5)
 
 DEPENDENCIES:
   - MTSDWebImage (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MTSDWebImage: eced0688a0ca02cd608fb3733a5775890566da6f
+  MTSDWebImage: 3ba3b26fc10605cb5834ba14761060802e5f8b6e
 
 PODFILE CHECKSUM: 0444f404e04852457164eda3d2c5eb107525ab4c
 

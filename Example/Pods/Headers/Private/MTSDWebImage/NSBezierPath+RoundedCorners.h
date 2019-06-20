@@ -1,1 +1,0 @@
-../../../../../MTSDWebImage/Classes/Private/NSBezierPath+RoundedCorners.h

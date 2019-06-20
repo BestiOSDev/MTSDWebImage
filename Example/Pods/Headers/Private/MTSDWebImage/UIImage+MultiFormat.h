@@ -1,1 +1,0 @@
-../../../../../MTSDWebImage/Classes/Public/UIImage+MultiFormat.h
