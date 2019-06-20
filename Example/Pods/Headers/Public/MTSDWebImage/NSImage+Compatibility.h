@@ -1,1 +1,0 @@
-../../../../../MTSDWebImage/Classes/Public/NSImage+Compatibility.h

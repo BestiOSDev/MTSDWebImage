@@ -60,11 +60,11 @@ FOUNDATION_EXPORT const unsigned char MTSDWebImageVersionString[];
 #import "NSData+ImageContentType.h"
 #import "SDWebImageDefine.h"
 #import "SDWebImageError.h"
-#import "SDInternalMacros.h"
-// Mac
-#if __has_include("NSImage+Compatibility.h")
-
-#endif
+////#import "SDInternalMacros.h"
+//// Mac
+//#if __has_include("NSImage+Compatibility.h")
+//
+//#endif
 #if __has_include("NSButton+WebCache.h")
 #import "NSButton+WebCache.h"
 #endif
