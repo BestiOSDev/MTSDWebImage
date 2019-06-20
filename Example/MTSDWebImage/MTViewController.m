@@ -18,15 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     [[UIImageView new] sd_setImageWithURL:[NSURL URLWithString:@""]];
-
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

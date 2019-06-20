@@ -26,10 +26,10 @@ Pod::Spec.new do |s|
   
   if ENV['IS_SOURCE']
     s.source_files = 'MTSDWebImage/Classes/**/*{h,m}'
-    #s.public_header_files = 'MTSDWebImage/Classes/Public/**/*.h'
+    s.public_header_files = 'MTSDWebImage/Classes/**/*.h'
     else
     s.source_files = 'MTSDWebImage/Framework/**/*{h}'
-    s.vendored_libraries = 'MTSDWebImage/Framework/libMTSDWebImage.a'
+    s.ios.vendored_frameworks = 'MTIQKeyboardManager/Framework/MTSDWebImage.framework'
   end
   
   s.requires_arc = true
