@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDWebImageTransition.h
+../../../../../MTSDWebImage/Classes/SDWebImageTransition.h

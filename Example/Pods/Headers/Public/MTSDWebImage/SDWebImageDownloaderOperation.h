@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDWebImageDownloaderOperation.h
+../../../../../MTSDWebImage/Classes/SDWebImageDownloaderOperation.h

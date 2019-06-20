@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIImage+ForceDecode.h
+../../../../../MTSDWebImage/Classes/UIImage+ForceDecode.h

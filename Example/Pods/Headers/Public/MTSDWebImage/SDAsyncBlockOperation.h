@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDAsyncBlockOperation.h
+../../../../../MTSDWebImage/Classes/Private/SDAsyncBlockOperation.h

@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDMemoryCache.h
+../../../../../MTSDWebImage/Classes/SDMemoryCache.h

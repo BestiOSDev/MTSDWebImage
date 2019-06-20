@@ -6,12 +6,12 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "SDWebImageManager.h"
 #import "SDImageCache.h"
 #import "SDWebImageDownloader.h"
 #import "UIImage+Metadata.h"
 #import "SDWebImageError.h"
+#import "SDInternalMacros.h"
 
 static id<SDImageCache> _defaultImageCache;
 static id<SDImageLoader> _defaultImageLoader;

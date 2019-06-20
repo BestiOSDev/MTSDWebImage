@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDWebImageError.h
+../../../../../MTSDWebImage/Classes/SDWebImageError.h

@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageAPNGCoder.h
+../../../../../MTSDWebImage/Classes/SDImageAPNGCoder.h

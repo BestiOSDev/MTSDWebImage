@@ -6,13 +6,13 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "UIImageView+HighlightedWebCache.h"
 
 #if SD_UIKIT
 
 #import "UIView+WebCacheOperation.h"
 #import "UIView+WebCache.h"
+#import "SDInternalMacros.h"
 
 static NSString * const SDHighlightedImageOperationKey = @"UIImageViewImageOperationHighlighted";
 

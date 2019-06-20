@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDWeakProxy.h
+../../../../../MTSDWebImage/Classes/Private/SDWeakProxy.h

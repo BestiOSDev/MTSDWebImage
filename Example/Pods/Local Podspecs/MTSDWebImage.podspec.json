@@ -1,6 +1,6 @@
 {
   "name": "MTSDWebImage",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "SDWebImage静态库 framework",
   "description": "SDWebImage静态库 framework 提高便以速度",
   "homepage": "https://github.com/BestiOSDev/MTSDWebImage",
@@ -13,13 +13,12 @@
   },
   "source": {
     "git": "https://github.com/BestiOSDev/MTSDWebImage.git",
-    "tag": "0.1.2"
+    "tag": "0.1.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "MTSDWebImage/Framework/**/*{h}",
-  "vendored_libraries": "MTSDWebImage/Framework/libMTSDWebImage.a",
+  "source_files": "MTSDWebImage/Classes/**/*{h,m}",
   "requires_arc": true,
   "frameworks": [
     "UIKit",

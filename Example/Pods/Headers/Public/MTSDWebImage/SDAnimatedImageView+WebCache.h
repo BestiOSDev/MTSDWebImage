@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDAnimatedImageView+WebCache.h
+../../../../../MTSDWebImage/Classes/SDAnimatedImageView+WebCache.h

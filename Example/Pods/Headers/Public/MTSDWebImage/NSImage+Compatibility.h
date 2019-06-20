@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/NSImage+Compatibility.h
+../../../../../MTSDWebImage/Classes/NSImage+Compatibility.h

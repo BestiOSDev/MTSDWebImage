@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDInternalMacros.h
+../../../../../MTSDWebImage/Classes/Private/SDInternalMacros.h

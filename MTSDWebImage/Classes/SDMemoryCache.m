@@ -7,9 +7,9 @@
  */
 
 #import "SDMemoryCache.h"
-#import "SDInternalMacros.h"
 #import "SDImageCacheConfig.h"
 #import "UIImage+MemoryCacheCost.h"
+#import "SDInternalMacros.h"
 
 static void * SDMemoryCacheContext = &SDMemoryCacheContext;
 

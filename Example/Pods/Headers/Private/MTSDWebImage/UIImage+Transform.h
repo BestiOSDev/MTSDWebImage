@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIImage+Transform.h
+../../../../../MTSDWebImage/Classes/UIImage+Transform.h

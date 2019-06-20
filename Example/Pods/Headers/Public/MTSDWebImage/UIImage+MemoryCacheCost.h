@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIImage+MemoryCacheCost.h
+../../../../../MTSDWebImage/Classes/UIImage+MemoryCacheCost.h

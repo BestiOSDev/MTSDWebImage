@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIImage+GIF.h
+../../../../../MTSDWebImage/Classes/UIImage+GIF.h

@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageTransformer.h
+../../../../../MTSDWebImage/Classes/SDImageTransformer.h

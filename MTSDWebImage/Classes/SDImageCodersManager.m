@@ -6,11 +6,11 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "SDImageCodersManager.h"
 #import "SDImageIOCoder.h"
 #import "SDImageGIFCoder.h"
 #import "SDImageAPNGCoder.h"
+#import "SDInternalMacros.h"
 
 @interface SDImageCodersManager ()
 

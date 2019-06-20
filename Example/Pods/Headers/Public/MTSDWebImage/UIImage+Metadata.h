@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIImage+Metadata.h
+../../../../../MTSDWebImage/Classes/UIImage+Metadata.h

@@ -1,26 +1,20 @@
-/*
- * This file is part of the SDWebImage package.
- * (c) Olivier Poitrey <rs@dailymotion.com"
- * (c) Florent Vilmart
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+//
+//  MTSDWebImage.h
+//  MTSDWebImage
+//
+//  Created by dzb on 2019/6/20.
+//  Copyright © 2019 大兵布莱恩特. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+//! Project version number for MTSDWebImage.
+FOUNDATION_EXPORT double MTSDWebImageVersionNumber;
+
+//! Project version string for MTSDWebImage.
+FOUNDATION_EXPORT const unsigned char MTSDWebImageVersionString[];
 
 #import "SDWebImageCompat.h"
-
-#if SD_UIKIT
-#import <UIKit/UIKit.h>
-#endif
-
-//! Project version number for WebImage.
-FOUNDATION_EXPORT double WebImageVersionNumber;
-
-//! Project version string for WebImage.
-FOUNDATION_EXPORT const unsigned char WebImageVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <WebImage/PublicHeader.h"
-
 #import "SDWebImageManager.h"
 #import "SDWebImageCacheKeyFilter.h"
 #import "SDWebImageCacheSerializer.h"

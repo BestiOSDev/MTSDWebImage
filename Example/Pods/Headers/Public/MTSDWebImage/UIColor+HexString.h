@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/UIColor+HexString.h
+../../../../../MTSDWebImage/Classes/Private/UIColor+HexString.h

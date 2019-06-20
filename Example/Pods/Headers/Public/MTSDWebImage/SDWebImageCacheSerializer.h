@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDWebImageCacheSerializer.h
+../../../../../MTSDWebImage/Classes/SDWebImageCacheSerializer.h

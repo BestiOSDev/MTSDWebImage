@@ -6,8 +6,8 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "SDImageCachesManagerOperation.h"
+#import "SDInternalMacros.h"
 
 @implementation SDImageCachesManagerOperation
 {

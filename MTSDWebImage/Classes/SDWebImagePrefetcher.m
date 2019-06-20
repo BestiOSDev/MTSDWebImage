@@ -6,9 +6,9 @@
  * file that was distributed with this source code.
  */
 
-#import "SDInternalMacros.h"
 #import "SDWebImagePrefetcher.h"
 #import "SDAsyncBlockOperation.h"
+#import "SDInternalMacros.h"
 #import <stdatomic.h>
 
 @interface SDWebImagePrefetchToken () {

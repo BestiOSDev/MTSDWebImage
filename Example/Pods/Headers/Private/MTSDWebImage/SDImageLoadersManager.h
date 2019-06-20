@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageLoadersManager.h
+../../../../../MTSDWebImage/Classes/SDImageLoadersManager.h

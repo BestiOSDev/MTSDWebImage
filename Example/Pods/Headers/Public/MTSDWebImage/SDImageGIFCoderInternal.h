@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageGIFCoderInternal.h
+../../../../../MTSDWebImage/Classes/Private/SDImageGIFCoderInternal.h

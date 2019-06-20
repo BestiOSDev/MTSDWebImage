@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageFrame.h
+../../../../../MTSDWebImage/Classes/SDImageFrame.h

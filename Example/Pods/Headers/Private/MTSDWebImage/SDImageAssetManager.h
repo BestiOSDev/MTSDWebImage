@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageAssetManager.h
+../../../../../MTSDWebImage/Classes/Private/SDImageAssetManager.h

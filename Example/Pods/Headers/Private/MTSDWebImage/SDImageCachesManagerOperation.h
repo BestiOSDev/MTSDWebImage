@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDImageCachesManagerOperation.h
+../../../../../MTSDWebImage/Classes/Private/SDImageCachesManagerOperation.h

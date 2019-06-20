@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/SDAnimatedImageView.h
+../../../../../MTSDWebImage/Classes/SDAnimatedImageView.h

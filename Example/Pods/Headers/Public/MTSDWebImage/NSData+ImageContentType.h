@@ -1,1 +1,1 @@
-../../../../../MTSDWebImage/Framework/NSData+ImageContentType.h
+../../../../../MTSDWebImage/Classes/NSData+ImageContentType.h
