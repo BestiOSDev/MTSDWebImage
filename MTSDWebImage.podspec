@@ -16,9 +16,8 @@ Pod::Spec.new do |s|
   DESC
   
   s.homepage         = 'https://github.com/BestiOSDev/MTSDWebImage'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'BestiOSDev' => '1060545231@qq.com' }
+  s.author           = { 'Dzb' => '1060545231@qq.com' }
   s.source           = { :git => 'https://github.com/BestiOSDev/MTSDWebImage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
@@ -36,5 +35,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   
 end
+
 
 
