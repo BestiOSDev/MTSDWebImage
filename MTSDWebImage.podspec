@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTSDWebImage'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'SDWebImage静态库 framework'
   
   s.description      = <<-DESC
