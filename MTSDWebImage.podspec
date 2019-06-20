@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTSDWebImage'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'SDWebImage静态库 framework'
   
   s.description      = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   
   s.homepage         = 'https://github.com/BestiOSDev/MTSDWebImage'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Dzb' => '1060545231@qq.com' }
+  s.author           = { 'ZhaoBingDong' => 'dzb8818082@163.com' }
   s.source           = { :git => 'https://github.com/BestiOSDev/MTSDWebImage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
