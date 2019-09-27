@@ -38,7 +38,6 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
 @interface SDWebImageDownloader () <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
 @property (strong, nonatomic, nonnull) NSOperationQueue *downloadQueue;
-@property (weak, nonatomic, nullable) NSOperation *lastAddedOperation;
 @property (strong, nonatomic, nonnull) NSMutableDictionary<NSURL *, NSOperation<SDWebImageDownloaderOperation> *> *URLOperations;
 @property (strong, nonatomic, nullable) NSMutableDictionary<NSString *, NSString *> *HTTPHeaders;
 @property (strong, nonatomic, nonnull) dispatch_semaphore_t HTTPHeadersLock; // A lock to keep the access to `HTTPHeaders` thread-safe
@@ -119,7 +118,7 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
             }
             headerDictionary[@"User-Agent"] = userAgent;
         }
-        headerDictionary[@"Accept"] = @"image/*;q=0.8";
+        headerDictionary[@"Accept"] = @"image/*,*/*;q=0.8";
         _HTTPHeaders = headerDictionary;
         _HTTPHeadersLock = dispatch_semaphore_create(1);
         _operationsLock = dispatch_semaphore_create(1);
@@ -204,6 +203,7 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
     }
     
     SD_LOCK(self.operationsLock);
+    id downloadOperationCancelToken;
     NSOperation<SDWebImageDownloaderOperation> *operation = [self.URLOperations objectForKey:url];
     // There is a case that the operation may be marked as finished or cancelled, but not been removed from `self.URLOperations`.
     if (!operation || operation.isFinished || operation.isCancelled) {
@@ -230,19 +230,24 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
         // Add operation to operation queue only after all configuration done according to Apple's doc.
         // `addOperation:` does not synchronously execute the `operation.completionBlock` so this will not cause deadlock.
         [self.downloadQueue addOperation:operation];
-    }
-    else if (!operation.isExecuting) {
-        if (options & SDWebImageDownloaderHighPriority) {
-            operation.queuePriority = NSOperationQueuePriorityHigh;
-        } else if (options & SDWebImageDownloaderLowPriority) {
-            operation.queuePriority = NSOperationQueuePriorityLow;
-        } else {
-            operation.queuePriority = NSOperationQueuePriorityNormal;
+        downloadOperationCancelToken = [operation addHandlersForProgress:progressBlock completed:completedBlock];
+    } else {
+        // When we reuse the download operation to attach more callbacks, there may be thread safe issue because the getter of callbacks may in another queue (decoding queue or delegate queue)
+        // So we lock the operation here, and in `SDWebImageDownloaderOperation`, we use `@synchonzied (self)`, to ensure the thread safe between these two classes.
+        @synchronized (operation) {
+            downloadOperationCancelToken = [operation addHandlersForProgress:progressBlock completed:completedBlock];
+        }
+        if (!operation.isExecuting) {
+            if (options & SDWebImageDownloaderHighPriority) {
+                operation.queuePriority = NSOperationQueuePriorityHigh;
+            } else if (options & SDWebImageDownloaderLowPriority) {
+                operation.queuePriority = NSOperationQueuePriorityLow;
+            } else {
+                operation.queuePriority = NSOperationQueuePriorityNormal;
+            }
         }
     }
     SD_UNLOCK(self.operationsLock);
-    
-    id downloadOperationCancelToken = [operation addHandlersForProgress:progressBlock completed:completedBlock];
     
     SDWebImageDownloadToken *token = [[SDWebImageDownloadToken alloc] initWithDownloadOperation:operation];
     token.url = url;
@@ -264,7 +269,7 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
     // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests if told otherwise
     NSURLRequestCachePolicy cachePolicy = options & SDWebImageDownloaderUseNSURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
     NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:cachePolicy timeoutInterval:timeoutInterval];
-    mutableRequest.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies);
+    mutableRequest.HTTPShouldHandleCookies = SD_OPTIONS_CONTAINS(options, SDWebImageDownloaderHandleCookies);
     mutableRequest.HTTPShouldUsePipelining = YES;
     SD_LOCK(self.HTTPHeadersLock);
     mutableRequest.allHTTPHeaderFields = self.HTTPHeaders;
@@ -315,9 +320,12 @@ static void * SDWebImageDownloaderContext = &SDWebImageDownloaderContext;
     }
     
     if (self.config.executionOrder == SDWebImageDownloaderLIFOExecutionOrder) {
-        // Emulate LIFO execution order by systematically adding new operations as last operation's dependency
-        [self.lastAddedOperation addDependency:operation];
-        self.lastAddedOperation = operation;
+        // Emulate LIFO execution order by systematically, each previous adding operation can dependency the new operation
+        // This can gurantee the new operation to be execulated firstly, even if when some operations finished, meanwhile you appending new operations
+        // Just make last added operation dependents new operation can not solve this problem. See test case #test15DownloaderLIFOExecutionOrder
+        for (NSOperation *pendingOperation in self.downloadQueue.operations) {
+            [pendingOperation addDependency:operation];
+        }
     }
     
     return operation;
@@ -536,6 +544,7 @@ didReceiveResponse:(NSURLResponse *)response
     if (options & SDWebImageAvoidDecodeImage) downloaderOptions |= SDWebImageDownloaderAvoidDecodeImage;
     if (options & SDWebImageDecodeFirstFrameOnly) downloaderOptions |= SDWebImageDownloaderDecodeFirstFrameOnly;
     if (options & SDWebImagePreloadAllFrames) downloaderOptions |= SDWebImageDownloaderPreloadAllFrames;
+    if (options & SDWebImageMatchAnimatedImageClass) downloaderOptions |= SDWebImageDownloaderMatchAnimatedImageClass;
     
     if (cachedImage && options & SDWebImageRefreshCached) {
         // force progressive off if image already cached but forced refreshing
